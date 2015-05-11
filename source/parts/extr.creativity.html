@@ -1,0 +1,44 @@
+
+<div class="text">Permite buscar bla bla bla.....</div>
+<div><a class="ajax" onclick="alert('mb.pdf.magazine');">Activar Opciones Busqueda.</a></div>
+<div><a class="ajax" onclick="alert('mb.pdf.magazine');">Ver solo un vehiculo</a></div>
+<div><a class="ajax" onclick="ss();">Ver Flota</a></div>
+<div id="basic-modal">
+             <a class="ajax" onclick="initd();">Ver Grid de información</a></div>
+<div id="dialog" title="Current">
+    <iframe src="vista/gridAjax.php" height="490" width="900" style="border:0"></iframe>
+	</div>
+
+<script type="text/javascript">
+    function initd(){
+        momentoActual = new Date()
+        hora = momentoActual.getHours()
+minuto = momentoActual.getMinutes()
+segundo = momentoActual.getSeconds()
+
+
+horaImprimible = hora + " : " + minuto + " : " + segundo
+        cargarPagina('vista/gridAjax.php?='+horaImprimible,'dialog');
+        
+
+
+
+dd(horaImprimible);
+}
+function dd(g){
+
+
+	$(function() {
+		$("#dialog").dialog({
+			bgiframe: true,
+			height: 300,
+                         width:400,
+			modal: true,
+                        Close: function() {
+				$(this).dialog('destroy');}
+
+		});
+	});
+}
+	</script>
+

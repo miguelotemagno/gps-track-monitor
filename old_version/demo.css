@@ -1,0 +1,119 @@
+/*
+
+This is a Tutoralzine Demo 
+Original tutorial: A simple AJAX website with jQuery
+Tutorial URL: http://tutorialzine.com/2009/09/simple-ajax-website-jquery/
+
+You are free to use the following demo code for any purpose you see fit.
+
+*/
+
+
+/* Page styles */
+#menuLog { font-size:1.4em; margin:20px; }
+	.hidden { position:absolute; top:0; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+	.fg-button { left:10%;margin:10px; text-decoration:none !important; cursor:pointer; position:relative; text-align: center; zoom: 1; }
+	.fg-button .ui-icon { position: absolute; top: 50%; margin-top: -8px; left: 50%; margin-left: -8px; }
+	a.fg-button { float:left;  }
+	button.fg-button { width:auto; overflow:visible; } /* removes extra button width in IE */
+
+	.fg-button-icon-left { padding-left: 2.1em; }
+	.fg-button-icon-right { padding-right: 2.1em; }
+	.fg-button-icon-left .ui-icon { right: auto; left: .2em; margin-left: 0; }
+	.fg-button-icon-right .ui-icon { left: auto; right: .2em; margin-left: 0; }
+	.fg-button-icon-solo { display:block; width:8px; text-indent: -9999px; }	 /* solo icon buttons must have block properties for the text-indent to work */
+
+	.fg-button.ui-state-loading .ui-icon { background: url(spinner_bar.gif) no-repeat 0 0; }
+
+        
+body,h1,h2,h3,p,td,quote,small,form,input,ul,li,ol,label{
+	margin:0px;
+	padding:0px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+	margin-top:0px;
+	color:#51555C;
+	font-size:10px;
+	background-color:#123456;
+	text-align:center;
+}
+
+.clear{
+	clear:both;
+}
+
+a, a:visited {
+	color:#007bc4;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+#rounded{
+	width:80%;
+	margin:20px auto;
+	text-align:center;
+}
+
+.container{
+	background-color:#FFFFFF;
+	padding:10px 20px 20px 20px;
+}
+
+
+ul{
+	margin:30px 0px;
+}
+
+li{
+	list-style:none;
+	display:block;
+	float:left;
+	width:80px;
+}
+
+li a,li a:visited{
+	padding:5px 10px;
+	text-align:center;
+	background-color:#000033;
+	color:white;
+	
+	-moz-border-radius:5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius:5px;
+
+	display:block;
+	margin-right:10px;
+}
+
+li a:hover{
+	background-color:#666666;
+	text-decoration:none;
+}
+
+#pageContent{
+	margin-top:20px;
+
+	border:1px dashed #cccccc;
+	padding:10px;
+        
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#loading{
+	visibility:hidden;
+}
+
+.demo{
+	color:white;
+}

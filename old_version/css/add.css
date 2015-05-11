@@ -1,0 +1,224 @@
+body {font-size:65%;}
+#jQueryUICssSwitch {width:150px;}
+
+div#button {
+
+cursor:pointer;
+display:block;
+background:url(img/backmenu.png);
+left:0px;
+
+position:absolute;
+text-align:center;
+top:10px;
+}
+div#consultarF {
+
+cursor:pointer;
+display:block;
+left:0px;
+
+position:absolute;
+text-align:center;
+top:80px;
+}
+div#container3 {
+
+
+}
+div#movimiento {
+
+cursor:pointer;
+display:block;
+left:30px;
+
+position:absolute;
+text-align:center;
+top:140px;
+}
+ div#map_canvas {
+display:block;
+height:100%;
+left:0px;
+position:absolute;
+    top:0;
+width:100%
+
+}
+div#getDirs {
+
+left:200px;
+position:absolute;
+top:100px;
+width:400px
+
+}
+div#datetime {
+border-color:white #B0B0B0 #B0B0B0 white;
+border-style:solid;
+border-width:1px;
+color:black;
+font-family:Arial,sans-serif;
+font-size:12px;
+width:200px;
+}
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      margin:10px;
+    }
+    .wrapper{
+      position:relative;
+      font-family:Arial, Helvetica, sans-serif;
+      padding-top:90px;
+      padding-left:50px;
+      width:80%;
+      margin:auto
+    }
+    .wrapper .text{
+      font-family:Arial, Helvetica, sans-serif;
+      padding-top:50px;
+    }
+    .wrapper h1{
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:26px;
+    }
+    .longText{
+      margin-top:20px;
+      width:600px;
+      font:18px/24px Arial, Helvetica, sans-serif;
+      color:gray;
+    }
+    span.btn{
+      padding:10px;
+      display:inline-block;
+      cursor:pointer;
+      font:12px/14px Arial, Helvetica, sans-serif;
+      color:#aaa;
+      background-color:#eee;
+      -moz-border-radius:10px;
+      -webkit-border-radius:10px;
+      -moz-box-shadow:#999 2px 0px 3px;
+      -webkit-box-shadow:#999 2px 0px 3px;
+    }
+    span.btn:hover{
+      background-color:#000;
+    }
+
+      /*
+      custom style for extruder
+      */
+
+    .extruder.left.a .flap{
+      font-size:18px;
+      color:white;
+      top:0;
+      padding:10px 0px 10px 10px;
+      background:#772B14;
+      width:30px;
+      position:absolute;
+      right:0px;
+      -moz-border-radius:0 10px 10px 0;
+      -webkit-border-top-right-radius:10px;
+      -webkit-border-bottom-right-radius:10px;
+      -moz-box-shadow:#666 2px 0px 3px;
+      -webkit-box-shadow:#666 2px 0px 3px;
+    }
+
+    .extruder.left.a .content{
+      border-right:3px solid #772B14;
+    }
+
+    .extruder.top .optionsPanel .panelVoice a:hover{
+      color:#fff;
+      background: url("elements/black_op_30.png");
+      border-bottom:1px solid #000;
+    }
+    .extruder.top .optionsPanel .panelVoice a{
+      border-bottom:1px solid #000;
+    }
+
+    .extruder.left.a .flap .flapLabel{
+      background:#772B14;
+    }
+.a9multiselect {
+				width: 9.9em;
+				font-family: Arial, Helvetica, sans-serif;
+				position: relative;
+				height: 22px;
+				padding: 0;
+				margin: -.05em 0 1em 0;
+				border: 0;
+			}
+			.a9multiselect .expcol-click, .a9multiselect .expcol-click-open {
+				background-color: #fff;
+				border: 1px solid #999;
+				padding: 0;
+				margin: 0;
+				cursor: default;
+				min-width: 9.8em;
+			}
+			.a9multiselect div.expcol-click {
+				position: absolute;
+				z-index: 104;
+				height: 20px;
+			}
+			.a9multiselect div.expcol-click-open {
+				border-bottom: 1px solid #fff;
+			}
+			.a9multiselect .title {
+				font-size: .8em;
+				height: 1.3em;
+				line-height: 1.2em;
+				overflow: hidden;
+				padding: .3em 1.1em .1em .5em;
+				background: white url(images/multiselect.gif) no-repeat top right;
+			}
+			.a9multiselect .title:hover {
+				background: white url(images/multiselect-hover.gif) no-repeat top right;
+			}
+			.expcol-body {
+				position: absolute;
+				z-index: 106;
+				min-height: 1em;
+				background: #e9f3f8;
+				padding: .1em;
+				display: block;
+				font-size: 75%;
+				display: none;
+				margin-top: -1px;
+				border: 1px solid #999;
+			}
+			.expcol-body ul {
+				overflow: auto;
+				min-height: 1em;
+				min-width: 20em;
+				margin: 0;
+				padding: 0;
+			}
+			.expcol-body li { margin: 0 0 .2em 0; list-style:none; }
+			.expcol-body li:hover {
+				background: #ddd;
+			}
+			.arc90_multiselect {
+				width: 12.5em;
+				height: 1.35em;
+				visibility: hidden;
+			}
+			.a9selectall {
+				border-bottom: 1px solid #ccc;
+			}
+
+			/* Styles for page layout */
+			DIV.exampless {
+				margin: 0 0 2em 0;
+				width: 17em;
+				border: 1px solid #e9e9e9;
+				padding: .3em;
+			}
+
+			DIV.exampless LABEL.examples {
+				display: block;
+				margin: 0 0 .2em 0;
+			}
+                    

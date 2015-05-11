@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jqGrid Demo</title>
+<style>
+html, body {
+	margin: 0;			/* Remove body margin/padding */
+	padding: 0;
+	overflow: auto;	/* Remove scroll bars on browser window */	
+	font: 12px "Lucida Grande", "Lucida Sans Unicode", Tahoma, Verdana;
+}
+</style>
+<!-- In head section we should include the style sheet for the grid -->
+<link rel="stylesheet" type="text/css" media="screen" href="../themes/redmond/jquery-ui-1.7.1.custom.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../themes/ui.jqgrid.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../themes/ui.multiselect.css" />
+
+<!-- Of course we should load the jquery library -->
+<script src="../js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="../js/jquery-ui-1.8.1.custom.min.js" type="text/javascript"></script>
+
+<script src="../js/jquery.layout.js" type="text/javascript"></script>
+<script src="../js/i18n/grid.locale-en.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$.jgrid.no_legacy_api = true;
+	$.jgrid.useJSON = true;
+</script>
+<script src="../js/ui.multiselect.js" type="text/javascript"></script>
+<script src="../js/jquery.jqGrid.min.js" type="text/javascript"></script>
+<script src="../js/jquery.tablednd.js" type="text/javascript"></script>
+<script src="../js/jquery.contextmenu.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+// We use a document ready jquery function.
+jQuery().ready(function(){
+
+var mygrid = jQuery("#s3list").jqGrid({
+   	url:'example.php',
+	datatype: "json",
+	
+	width: 700,
+   	colNames:['Index','Name', 'Code'],
+   	colModel:[
+   		{name:'id',index:'id',editable:true, editoptions:{readonly:true}, width:65, sorttype:'int'},
+   		{name:'lat',index:'lat', width:150},
+   		{name:'lon',index:'lon', width:100}
+   	],
+   	rowNum:20,
+   	mtype: "GET",
+   	rowList:[10,20,30,60,100,200,500],
+   	pager: '#s3pager',
+   	sortname: 'id',
+    viewrecords: true,
+	rownumbers: true,
+    sortorder: "asc",
+	gridview : true,
+        
+        editurl: 'server.php',
+    caption:"Toolbar Search Example"
+});
+jQuery("#s3list").jqGrid('navGrid','#s3pager',{view:true,search:false,refresh:false});
+jQuery("#s3list").jqGrid('navButtonAdd',"#s3pager",{caption:"Buscar",title:"Toggle Search Toolbar", buttonicon :'ui-icon-pin-s',
+	onClickButton:function(){
+		mygrid[0].toggleToolbar()
+	}
+});
+jQuery("#s3list").jqGrid('navButtonAdd',"#s3pager",{caption:"Clear",title:"Clear Search",buttonicon :'ui-icon-refresh',
+	onClickButton:function(){
+		mygrid[0].clearToolbar()
+	}
+});
+jQuery("#s3list").jqGrid('filterToolbar');
+jQuery("#s3list").jqGrid('gridResize',{minWidth:350,maxWidth:800,minHeight:80, maxHeight:350});
+});
+
+</script>
+</head>
+<body>
+    <table id="s3list"></table>
+<div id="s3pager"></div>
+
+<!-- the grid definition in html is a table tag with class 'scroll' -->
+<table id="list2"></table>
+<div id="pager2"></div>
+</body>
+</html>

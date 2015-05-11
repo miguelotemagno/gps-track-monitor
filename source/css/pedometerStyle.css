@@ -1,0 +1,47 @@
+#panel table {
+  border:solid 1px grey;
+  width:50%;
+  margin-bottom: 5px;
+}
+
+#panel table td:first-child  {
+  width: 24px;
+}
+
+html, body {
+	width:100%;
+	height:100%
+}
+.label {
+  font-size:smaller;
+  font-family:sans-serif;
+}
+
+.plain {
+	font-family:arial;
+	font-size:10pt;
+}
+.hdng {
+	font-weight:bold;
+	margin-top:10pt;
+}
+.new {
+	font-weight:bold;
+	margin-top:10pt;
+	color:#ff0000
+}
+.para {
+	margin-top:10pt;
+}
+.col1 {
+	width:100px
+}
+.sectionHdng{
+	margin-top:10pt;
+	background-color:#000000;
+	font-weight:bold;
+	font-size:12pt;
+	color:#ffffff;
+	width:100%
+}
+

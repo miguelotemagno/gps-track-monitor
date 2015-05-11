@@ -1,0 +1,10 @@
+<?php 
+$ipp='LOCALHOST';
+$pass='';
+$ipsql='localhost';
+$user='root';
+$ini=true;
+$t=split('_',$user);
+$db='maps';
+$key='';
+?> 
